@@ -2,7 +2,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     getVisitCount();
 })
 
-const functionApi = 'http://localhost:7071/api/httpTrigger1'
+const functionApi = 'https://getresumecounterfc47.azurewebsites.net/api/httpTrigger1?';
+const localFunctionApi = 'http://localhost:7071/api/httpTrigger1'
 const getVisitCount = () => {
     let count = 0
     fetch(functionApi)
