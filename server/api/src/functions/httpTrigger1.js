@@ -1,9 +1,8 @@
 const { app } = require("@azure/functions");
 const { CosmosClient } = require("@azure/cosmos");
-require("dotenv").config();
 
-const endpoint = process.env.COSMOS_DB_ENDPOINT;
-const key = process.env.COSMOS_DB_KEY;
+const endpoint = process.env.AccountEndpoint;
+const key = process.env.AccountKey;
 
 app.http("httpTrigger1", {
   methods: ["GET", "POST"],
