@@ -16,7 +16,7 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            az storage blob upload-batch --account-name rr123 --auth-mode key -d '$web' -s ui/
+            az storage blob upload-batch --overwrite --account-name rr123 --auth-mode key -d '$web' -s ui/
       - name: Purge CDN Front Dor
         uses: azure/CLI@v1
         with:
