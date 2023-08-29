@@ -16,13 +16,12 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            az storage blob upload-batch --account-name rr123 --auth-mode key -d '$web' -s ui
-      - name: Purge CDN endpoint
+            az storage blob upload-batch --account-name rr123 --auth-mode key -d '$web' -s ui/
+      - name: Purge CDN Front Dor
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            az cdn endpoint purge --content-paths  "/*" --profile-name "azureinterviewfc" --name "azureinterviewfc" --resource-group "azureresume-rg"
-
+            az network front-door purge-endpoint --resource-group "azureresume-rg" --name "azureinterviewfc" --content-paths "/"
       # Azure logout
       - name: logout
         run: |
