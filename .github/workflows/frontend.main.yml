@@ -21,7 +21,7 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            az network front-door purge-endpoint --resource-group azureresume-rg --name azureinterviewfc --content-paths "/"
+            az network front-door purge-endpoint --resource-group azureresume-rg --name azureinterviewfc-hadeajcgf8gkbxfm.z01.azurefd.net --content-paths "/"
       # Azure logout
       - name: logout
         run: |
